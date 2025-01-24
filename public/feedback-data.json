@@ -1,0 +1,62 @@
+{
+  "id": "jerl3j4lk3j4lj3l4jl3j4",
+  "home": {
+    "image": "/images/scl.jpg"
+  },
+  "choices": [
+    {
+      "id": "ejrejr89jrkjreljrlejrlì",
+      "color": "",
+      "icon": "/images/smile_10637092.png",
+      "selected": 0,
+      "text": "Soddisfatto!",
+      "additionalComment": "",
+      "list": []
+    },
+    {
+      "id": "aaaa143i9489038409",
+      "color": "orange",
+      "icon": "/images/neutral_16382351.png",
+      "selected": 0,
+      "text": "Parzialmente Soddisfatto!",
+      "additionalComment": "",
+      "list": [
+        {
+          "id": "0",
+          "text": "Come valuti la pulizia del nostro negozio?",
+          "value": ""
+        },
+        {
+          "id": "1",
+          "text": "Hai trovato la merce che cercavi disponibile?",
+          "value": ""
+        },
+        {
+          "id": "2",
+          "text": "Hai non trovato la merce che cercavi ?",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "herwqiohuerk9099494",
+      "color": "red",
+      "icon": "/images/angry_3741288.png",
+      "selected": 0,
+      "text": "Non Soddisfatto!",
+      "additionalComment": "",
+      "list": [
+        {
+          "id": "0",
+          "text": "Come valuti la pulizia del nostro negozio?",
+          "value": ""
+        },
+        {
+          "id": "1",
+          "text": "Hai trovato la merce che cercavi disponibile?",
+          "value": ""
+        }
+      ]
+    }
+  ]
+}
