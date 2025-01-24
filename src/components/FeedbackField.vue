@@ -1,7 +1,7 @@
 <template>
   <div class="feedback-field">
     <p class="feedback-question">{{ choiceText }}</p>
-    <EmojiSelector :choice="store.feedbackData.choices"  @select="onSelect" size="small" />
+    <EmojiSelector :choice="store.feedbackData.choices" @select="onSelect" size="small" />
   </div>
 </template>
 
@@ -27,18 +27,17 @@ export default {
   },
   components: { EmojiSelector },
   data() {
-      return {
-        store,
-      };
-    },
-    methods: {
+    return {
+      store,
+    };
+  },
+  methods: {
     onSelect(selectedValue) {
       console.log("Ho ricevuto la selezione:", selectedValue);
       // Aggiorna il "value" della domanda nello store
       store.updateFieldValue(this.choiceId, this.questionId, selectedValue);
     },
   },
-
 };
 </script>
 
@@ -60,7 +59,5 @@ export default {
   .emoji-selector {
     flex: 0 0 40%;
   }
-
-
 }
 </style>
