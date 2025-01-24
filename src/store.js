@@ -14,7 +14,7 @@ export const store = reactive({
       //Simula un ritardo nel caricamento
       // await new Promise((resolve) => setTimeout(resolve, 2000));
 
-      const response = await fetch("/feedback-data.json");
+      const response = await fetch("/api/v1/scl/choice/getChoice");
       if (!response.ok) {
         throw new Error(`Errore nel caricamento: ${response.statusText}`);
       }
