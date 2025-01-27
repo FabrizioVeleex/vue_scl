@@ -5,7 +5,7 @@
     </div>
     <div v-else>
       <!-- Titolo -->
-      <div class="feedback-header">
+      <div class="feedback-header" :class="selectedChoiceTitle">
         <h1>Feedback - {{ selectedChoiceText }}</h1>
       </div>
 
@@ -114,6 +114,12 @@ export default {
         }
       },
     },
+
+    selectedChoiceTitle() {
+      const choiceId = this.$route.params.choiceId;
+      const selectedChoice = this.store.feedbackData.choices.find(choice => choice.id === choiceId);
+      return selectedChoice ? `bg-${selectedChoice.color}` : "bg-default";
+    }
   },
 };
 </script>
@@ -128,6 +134,16 @@ export default {
   padding: 0 0;
   width: 100%;
 
+  .bg-orange {
+      background: radial-gradient(circle, #ff9c3a 50%, #ff8930 80%, #ff7e28 100%);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .bg-red {
+      background: radial-gradient(circle, #e64545 50%, #b83838 80%, #8a2c2c 100%);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
   .feedback-header {
     width: 100vw;
     height: 80px;
@@ -136,8 +152,9 @@ export default {
     align-items: center;
     text-align: center;
     padding: 0;
-    background: radial-gradient(circle, #ff9c3a 50%, #ff8930 80%, #ff7e28 100%);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    
+
+    
 
     h1 {
       font-size: 2.5rem;
