@@ -14,13 +14,77 @@ export const store = reactive({
       //Simula un ritardo nel caricamento
       // await new Promise((resolve) => setTimeout(resolve, 2000));
 
-      const response = await fetch("/api/v1/scl/choice/getChoice");
-      if (!response.ok) {
-        throw new Error(`Errore nel caricamento: ${response.statusText}`);
-      }
-      const data = await response.json();
+      // const response = await fetch("/api/v1/scl/choice/getChoice");
+      // if (!response.ok) {
+      //   throw new Error(`Errore nel caricamento: ${response.statusText}`);
+      // }
+      // const data = await response.json();
 
-      this.feedbackData = data;
+      // this.feedbackData = data;
+
+      this.feedbackData = {
+        "id": "jerl3j4lk3j4lj3l4jl3j4",
+        "home": {
+          "image": "/images/scl.jpg"
+        },
+        "choices": [
+          {
+            "id": "ejrejr89jrkjreljrlejrlì",
+            "color": "",
+            "icon": "/images/smile_10637092.png",
+            "selected": 0,
+            "text": "Soddisfatto!",
+            "additionalComment": "",
+            "list": []
+          },
+          {
+            "id": "aaaa143i9489038409",
+            "color": "orange",
+            "icon": "/images/neutral_16382351.png",
+            "selected": 0,
+            "text": "Parzialmente Soddisfatto!",
+            "additionalComment": "",
+            "list": [
+              {
+                "id": "0",
+                "text": "Come valuti la pulizia del nostro negozio?",
+                "value": ""
+              },
+              {
+                "id": "1",
+                "text": "Hai trovato la merce che cercavi disponibile?",
+                "value": ""
+              },
+              {
+                "id": "2",
+                "text": "Hai non trovato la merce che cercavi ?",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "id": "herwqiohuerk9099494",
+            "color": "red",
+            "icon": "/images/angry_3741288.png",
+            "selected": 0,
+            "text": "Non Soddisfatto!",
+            "additionalComment": "",
+            "list": [
+              {
+                "id": "0",
+                "text": "Come valuti la pulizia del nostro negozio?",
+                "value": ""
+              },
+              {
+                "id": "1",
+                "text": "Hai trovato la merce che cercavi disponibile?",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      }
+
 
       this.loading = false;
       this.error = null;
@@ -77,7 +141,7 @@ export const store = reactive({
     const theChoice = this.feedbackData.choices.find(c => c.id === choiceId);
     if (!theChoice) return; //messo li in maniera facoltativa per il futuro 
 
-  
+
     // Trova la domanda nella lista
     const question = theChoice.list.find(q => q.id === questionId);
     if (!question) return;  //messo li in maniera facoltativa per il futuro 
@@ -87,8 +151,8 @@ export const store = reactive({
 
     for (let i = 0; i < this.feedbackData.choices.length; i++) {
       if (newValue === this.feedbackData.choices[i].id) {
-        numericValue = i; 
-        break; 
+        numericValue = i;
+        break;
       }
     }
 
@@ -105,7 +169,7 @@ export const store = reactive({
   submitFeedback(router) {
     // Log dei dati inviati (facoltativo per debug)
     console.log("Invio dati al server:", JSON.stringify(this.feedbackData, null, 2));
-  
+
     /*
     // Invio della richiesta
     const serverUrl = "https://your-server-endpoint.com/submit-feedback";
@@ -130,7 +194,7 @@ export const store = reactive({
       });
       */
 
-      router.push("/thank-you");
+    router.push("/thank-you");
   },
-  
+
 });

@@ -24,3 +24,17 @@ dist-ssr
 *.sw?
 
 public/bootstrap-5.3.3-dist/
+build/feedback-data.json
+build/index.html
+build/vite.svg
+build/css/app.dabeacb1.css
+build/fonts/Raleway-Bold.9f946c3b.ttf
+build/fonts/Raleway-Regular.eb5d8667.ttf
+build/images/angry_3741288.png
+build/images/neutral_16382351.png
+build/images/scl.jpg
+build/images/smile_10637092.png
+build/js/app.e8fb2289.js
+build/js/app.e8fb2289.js.map
+build/js/chunk-vendors.8382b4d2.js
+build/js/chunk-vendors.8382b4d2.js.map

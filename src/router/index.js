@@ -1,12 +1,13 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import HomePage from './pages/HomePage.vue';
-import OrangeFeedbackPage from "./pages/OrangeFeedbackPage.vue";
+import HomePage from './../pages/HomePage.vue';
+import OrangeFeedbackPage from "./../pages/OrangeFeedbackPage.vue";
 // import RedFeedbackPage from "./pages/RedFeedbackPage.vue";
-import ThankYouPage from "./pages/ThankYouPage.vue";
+import ThankYouPage from "./../pages/ThankYouPage.vue";
 
 const router = createRouter({
     history: createWebHistory(),
+    base: '/',
     routes: [
         {
             path: "/",
