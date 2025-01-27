@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vite build",
-    "preview": "vue-cli-service preview"
+    "build": "vue-cli-service build",
+    "preview": "vue-cli-service lint"
   },
   "dependencies": {
     "@vue/cli": "^5.0.8",

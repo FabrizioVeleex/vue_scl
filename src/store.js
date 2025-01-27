@@ -106,7 +106,8 @@ export const store = reactive({
     };
 
     if (this.feedbackData.choices[indexChoice].list.length === 0) {
-      console.log("invio al server:", this.feedbackData);
+      // console.log("invio al server:", this.feedbackData);
+      console.log("Invio dati al server:", JSON.stringify(this.feedbackData, null, 2));
 
       //invio  al server
       /*
@@ -135,8 +136,6 @@ export const store = reactive({
   },
 
   updateFieldValue(choiceId, questionId, newValue) {
-
-
     // Trova la scelta corrispondente
     const theChoice = this.feedbackData.choices.find(c => c.id === choiceId);
     if (!theChoice) return; //messo li in maniera facoltativa per il futuro 

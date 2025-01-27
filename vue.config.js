@@ -1,7 +1,7 @@
 const path = require('path')
 
 module.exports = {
-  publicPath: '/app/v1/scl',
+  // publicPath: '/app/v1/scl',
   configureWebpack: {
     resolve: {
       alias: {
