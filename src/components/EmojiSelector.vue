@@ -2,7 +2,7 @@
     <div class="emoji-selector">
         <button v-for="(e, key) in choice" :key="key" class="emoji-btn"
             :class="[size, { selected: selectedValue === e.id }]" @click="selectEmoji(e.id)">
-            <img :src="e.icon" :alt="e.text" />
+            <img class="emoji-icon" :src="e.icon" :alt="e.text" />
             <span class="emoji-text">{{ e.text }}</span>
         </button>
     </div>
@@ -72,10 +72,16 @@ export default {
         //     transform: scale(1.2);
         // }
 
-        &.selected {
+        &.selected .emoji-icon{
             // transform: scale(1.2);
-            border: 2px solid #4caf50; /* Evidenziazione visiva per emoji selezionata */
+            border: 4px solid #3c3c3c; /* Evidenziazione visiva per emoji selezionata */
             border-radius: 50%;
+            padding: 2px;
+        }
+
+        .emoji-icon {
+            transition: transform 0.4s ease-in-out;
+            padding: 6px;
         }
 
         &.small img {
