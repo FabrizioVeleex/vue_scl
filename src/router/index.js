@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 import HomePage from './../pages/HomePage.vue';
-import OrangeFeedbackPage from "./../pages/OrangeFeedbackPage.vue";
+import FeedbackPage from "../pages/FeedbackPage.vue";
 // import RedFeedbackPage from "./pages/RedFeedbackPage.vue";
 import ThankYouPage from "./../pages/ThankYouPage.vue";
 
@@ -15,9 +15,9 @@ const router = createRouter({
             component: HomePage,
         },
         {
-            path: "/orange-feedback/:choiceId",
-            name: "OrangeFeedback",
-            component: OrangeFeedbackPage,
+            path: "/page-feedback/:choiceId",
+            name: "Feedback",
+            component: FeedbackPage,
         },
         {
             path: "/thank-you",

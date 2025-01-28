@@ -51,7 +51,7 @@ export default {
   margin: 1.25rem 0px;
 
   .feedback-question {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin: 0px;
     flex: 0 0 40%;
   }

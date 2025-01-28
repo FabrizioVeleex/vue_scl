@@ -39,7 +39,7 @@ import TextArea from "@/components/TextArea.vue";
 import NavigationButtons from "@/components/NavigationButtons.vue";
 
 export default {
-  name: "OrangeFeedbackPage",
+  name: "FeedbackPage",
   components: { FeedbackField, TextArea, NavigationButtons },
   data() {
     return {
@@ -153,11 +153,8 @@ export default {
     text-align: center;
     padding: 0;
     
-
-    
-
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.0rem;
       font-weight: bold;
       color: #3c3c3c;
       margin: 0;
@@ -172,7 +169,7 @@ export default {
 
     h3 {
       text-align: center;
-      font-size: 2rem;
+      font-size: 1.6rem;
     }
   }
 
@@ -191,7 +188,7 @@ export default {
   justify-content: center;
   align-items: center;
   height: 100%;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #888;
 }
 </style>

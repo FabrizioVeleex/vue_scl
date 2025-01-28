@@ -24,7 +24,7 @@ export const store = reactive({
       this.feedbackData = {
         "id": "jerl3j4lk3j4lj3l4jl3j4",
         "home": {
-          "image": "/images/scl.jpg"
+          "image": "/images/86f5d685-c02a-422d-ade8-ce39cbc92ffc.jpg"
         },
         "choices": [
           {
@@ -130,7 +130,7 @@ export const store = reactive({
       */
       router.push("/thank-you");
     } else {
-      router.push(`/orange-feedback/${choiceId}`);
+      router.push(`/page-feedback/${choiceId}`);
     }
   },
 
