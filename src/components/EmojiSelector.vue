@@ -28,8 +28,15 @@ export default {
     },
     methods: {
         selectEmoji(id) {
-            this.selectedValue = id;
-            this.$emit("select", id);
+              // Se già selezionato, deseleziona
+              if (this.selectedValue === id) {
+                this.selectedValue = null;
+                this.$emit("select", null); 
+            } else {
+                // Altrimenti, seleziona l'emoji
+                this.selectedValue = id;
+                this.$emit("select", id); 
+            }
         },
     },
 };
@@ -52,7 +59,7 @@ export default {
         align-items: center;
         justify-content: flex-start;
         cursor: pointer;
-        transition: transform 0.4s ease-in-out;
+        // transition: transform 0.4s ease-in-out;
 
         img {
             width: 180px;
@@ -61,12 +68,14 @@ export default {
             margin: 4px;
         }
 
-        &:hover {
-            transform: scale(1.2);
-        }
+        // &:hover {
+        //     transform: scale(1.2);
+        // }
 
         &.selected {
-            transform: scale(1.2);
+            // transform: scale(1.2);
+            border: 2px solid #4caf50; /* Evidenziazione visiva per emoji selezionata */
+            border-radius: 50%;
         }
 
         &.small img {
