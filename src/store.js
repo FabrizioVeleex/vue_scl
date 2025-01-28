@@ -2,7 +2,6 @@ import { reactive } from "vue";
 
 export const store = reactive({
   loading: true,
-  error: null,
 
   feedbackData: {},
   // selectedSatisfaction: null,
@@ -30,7 +29,7 @@ export const store = reactive({
         "choices": [
           {
             "id": "ejrejr89jrkjreljrlejrlì",
-            "color": "",
+            "color": "green",
             "icon": "/images/smile_10637092.png",
             "selected": 0,
             "text": "Soddisfatto!",
@@ -139,7 +138,6 @@ export const store = reactive({
     // Trova la scelta corrispondente
     const theChoice = this.feedbackData.choices.find(c => c.id === choiceId);
     if (!theChoice) return; //messo li in maniera facoltativa per il futuro 
-
 
     // Trova la domanda nella lista
     const question = theChoice.list.find(q => q.id === questionId);
