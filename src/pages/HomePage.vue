@@ -63,9 +63,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 1rem;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow:   0 4px 6px rgba(0, 0, 0, 0.1);
 
     img {
-      max-height: 100%;
+      max-height: 70vh;
       max-width: 100%;
       object-fit: cover;
     }
@@ -77,15 +81,12 @@
     margin: 1rem 0;
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.0rem;
       font-weight: bold;
       color: #333;
     }
   }
-
-
 }
-  
   .loading {
     display: flex;
     justify-content: center;

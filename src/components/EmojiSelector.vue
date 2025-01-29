@@ -2,7 +2,7 @@
     <div class="emoji-selector">
         <button v-for="(e, key) in choice" :key="key" class="emoji-btn"
             :class="[size, { selected: selectedValue === e.id }]" @click="selectEmoji(e.id)">
-            <img :src="e.icon" :alt="e.text" />
+            <img class="emoji-icon" :src="e.icon" :alt="e.text" />
             <span class="emoji-text">{{ e.text }}</span>
         </button>
     </div>
@@ -28,8 +28,15 @@ export default {
     },
     methods: {
         selectEmoji(id) {
-            this.selectedValue = id;
-            this.$emit("select", id);
+              // Se già selezionato, deseleziona
+              if (this.selectedValue === id) {
+                this.selectedValue = null;
+                this.$emit("select", null); 
+            } else {
+                // Altrimenti, seleziona l'emoji
+                this.selectedValue = id;
+                this.$emit("select", id); 
+            }
         },
     },
 };
@@ -52,7 +59,7 @@ export default {
         align-items: center;
         justify-content: flex-start;
         cursor: pointer;
-        transition: transform 0.4s ease-in-out;
+        // transition: transform 0.4s ease-in-out;
 
         img {
             width: 180px;
@@ -61,12 +68,20 @@ export default {
             margin: 4px;
         }
 
-        &:hover {
-            transform: scale(1.2);
+        // &:hover {
+        //     transform: scale(1.2);
+        // }
+
+        &.selected .emoji-icon{
+            // transform: scale(1.2);
+            border: 4px solid #3c3c3c;
+            border-radius: 50%;
+            padding: 2px;
         }
 
-        &.selected {
-            transform: scale(1.2);
+        .emoji-icon {
+            transition: transform 0.4s ease-in-out;
+            padding: 6px;
         }
 
         &.small img {
