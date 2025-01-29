@@ -86,10 +86,7 @@
       color: #333;
     }
   }
-
-
 }
-  
   .loading {
     display: flex;
     justify-content: center;

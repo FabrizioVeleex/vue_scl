@@ -74,7 +74,7 @@ export default {
 
         &.selected .emoji-icon{
             // transform: scale(1.2);
-            border: 4px solid #3c3c3c; /* Evidenziazione visiva per emoji selezionata */
+            border: 4px solid #3c3c3c;
             border-radius: 50%;
             padding: 2px;
         }

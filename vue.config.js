@@ -1,20 +1,17 @@
+const { defineConfig } = require('@vue/cli-service');
 const path = require("path");
-const webpack = require("webpack");
+// const webpack = require("webpack");
 
-module.exports = {
-  // publicPath: '/app/v1/scl', 
+module.exports = defineConfig({
+  publicPath: '/app/v1/scl',  // Percorso base per il deploy
+  transpileDependencies: true,  // Mantiene la configurazione originale
+
   configureWebpack: {
     resolve: {
       alias: {
-        "@": path.resolve(__dirname, "src"), 
+        "@": path.resolve(__dirname, "src"), // Alias per la cartella src
       },
     },
-    plugins: [
-      new webpack.DefinePlugin({
-        __VUE_OPTIONS_API__: JSON.stringify(true), // Abilita l'Options API
-        __VUE_PROD_DEVTOOLS__: JSON.stringify(false), // Disabilita i DevTools in produzione
-        __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: JSON.stringify(false), // Disabilita dettagli idratazione (da mettere true se poi voglio debugging di vue con SSR)
-      }),
-    ],
   },
-};
+ 
+});
