@@ -34,14 +34,6 @@
     mounted() {
     //   console.log("modelValue:", this.modelValue);
     },
-    watch: {
-      "store.feedbackData.additionalComments": {
-        immediate: true,
-        // handler(newValue) {
-        //   console.log("Aggiornato additionalComments:", newValue);
-        // },
-      },
-    },
   };
   </script>
   
