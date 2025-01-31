@@ -10,7 +10,7 @@ export const store = reactive({
         this.error = null;
 
         try {
-            const response = await axios.get("http://localhost:3000/api/v1/scl/getHome");
+            const response = await axios.get("http://localhost:3000/api/v1/scl/choice/getChoice");
             this.feedbackData = response.data;
         } catch (error) {
             this.error = "Errore nel caricamento dei dati";
@@ -37,7 +37,7 @@ export const store = reactive({
 
             //invio  al server
             try {
-                const response = await axios.post("http://localhost:3000/api/v1/scl/addFeedbackData",
+                const response = await axios.post("http://localhost:3000/api/v1/scl/chioce/addFeedbackData",
                     this.feedbackData,
                     {
                         headers: {
